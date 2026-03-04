@@ -1,0 +1,17 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+
+# Development/build outputs (do not commit raw datasets or intermediate artifacts)
+data/raw/
+
+# Optional local temp outputs
+tmp/

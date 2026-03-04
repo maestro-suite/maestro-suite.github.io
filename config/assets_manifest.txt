@@ -1,0 +1,18 @@
+# One per line.
+# Format A: source/relative/path
+# Format B: source/relative/path => repo/relative/destination/path
+# Format C: alias:source/relative/path => repo/relative/destination/path
+# Aliases are defined in config/source_repos.txt
+
+# Core images
+mas:docs/imgs/maestro-logo.png => static/images/docs/imgs/maestro-logo.png
+mas:docs/imgs/maestro-arch.png => static/images/docs/imgs/maestro-arch.png
+
+# Raw plotting configs for later transformation (e.g., SVG generation pipelines)
+mas:plot/configs/runs_wi_by_arch_parquet.json => data/raw/plot/configs/runs_wi_by_arch_parquet.json
+mas:plot/configs/runs_wo_by_arch_parquet.json => data/raw/plot/configs/runs_wo_by_arch_parquet.json
+mas:plot/configs/runs_wi_by_model_parquet.json => data/raw/plot/configs/runs_wi_by_model_parquet.json
+
+# Raw traces/data from agent-observability
+obs:mas_traces/tree-of-thoughts/data/game_of_24_benchmark.csv => data/raw/agent-observability/tree-of-thoughts/game_of_24_benchmark.csv
+obs:mas_traces/mcp_financial_analyzer_benchmark/translated_traces/financial_analyzer_traces-20251211_123420.translated.json => data/raw/agent-observability/mcp_financial_analyzer_benchmark/financial_analyzer_traces-20251211_123420.translated.json

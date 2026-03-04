@@ -1,0 +1,149 @@
+:root {
+  --bg: #f5f2e8;
+  --card: #ffffff;
+  --ink: #1f2430;
+  --accent: #bf5b04;
+  --accent-soft: #f9d8b8;
+  --muted: #596070;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Georgia", "Times New Roman", serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 20% 10%, #fff5e9 0%, transparent 35%),
+    linear-gradient(180deg, #f8f5ed 0%, #efe9da 100%);
+}
+
+.hero {
+  min-height: 56vh;
+  padding: 4rem 1.25rem 3rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background:
+    linear-gradient(120deg, rgba(191, 91, 4, 0.12), rgba(31, 36, 48, 0.08));
+}
+
+.hero-inner {
+  max-width: 860px;
+  animation: rise-in 700ms ease-out both;
+}
+
+.logo {
+  width: 84px;
+  height: 84px;
+  object-fit: contain;
+}
+
+h1 {
+  margin: 1rem 0 0.25rem;
+  font-size: clamp(2.2rem, 6vw, 3.8rem);
+  letter-spacing: 0.02em;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.65rem 1rem;
+  text-decoration: none;
+  color: #fff;
+  background: var(--accent);
+  border-radius: 8px;
+}
+
+.section {
+  padding: 2rem 1.25rem;
+}
+
+.content {
+  max-width: 980px;
+  margin: 0 auto;
+  background: var(--card);
+  border-radius: 14px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 26px rgba(31, 36, 48, 0.08);
+}
+
+.arch {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #e7dece;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.bar-chart {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 130px 1fr 52px;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.bar-label {
+  font-size: 0.95rem;
+}
+
+.bar-track {
+  background: var(--accent-soft);
+  border-radius: 999px;
+  overflow: hidden;
+  height: 16px;
+}
+
+.bar-fill {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #d16a12, #a14600);
+  transition: width 900ms ease-out;
+}
+
+.bar-value {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.footer {
+  padding: 2rem 1rem 3rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 720px) {
+  .bar-row {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+  .bar-value {
+    text-align: left;
+  }
+}

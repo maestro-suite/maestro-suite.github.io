@@ -1,0 +1,3 @@
+# alias=absolute_repo_path
+mas=/home/cheny0y/git/mas-benchmark
+obs=/home/cheny0y/git/agent-observability
