@@ -1,0 +1,317 @@
+{
+  "models": [
+    {
+      "model": "gemini-2.0-flash-lite",
+      "cost_per_task_median": 0.004878,
+      "duration_per_task_median": 29.960798738999998,
+      "accuracy_pct": 54.055593529277736,
+      "accuracy_pct_min": 36.8421052631579,
+      "accuracy_pct_max": 68.18181818181819,
+      "accuracy_spread": 31.33971291866029,
+      "per_arch": [
+        {
+          "arch": "P&E",
+          "cost_per_task_median": 0.007269,
+          "duration_per_task_median": 32.1491503685,
+          "accuracy_pct": 68.18181818181819
+        },
+        {
+          "arch": "crag",
+          "cost_per_task_median": 0.003243,
+          "duration_per_task_median": 32.600853637,
+          "accuracy_pct": 57.142857142857146
+        },
+        {
+          "arch": "lats",
+          "cost_per_task_median": 0.010551,
+          "duration_per_task_median": 22.104331309,
+          "accuracy_pct": 36.8421052631579
+        }
+      ]
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "cost_per_task_median": 0.0076335000000000005,
+      "duration_per_task_median": 42.09480415,
+      "accuracy_pct": 68.25396825396825,
+      "accuracy_pct_min": 66.66666666666667,
+      "accuracy_pct_max": 71.42857142857143,
+      "accuracy_spread": 4.761904761904759,
+      "per_arch": [
+        {
+          "arch": "P&E",
+          "cost_per_task_median": 0.0124065,
+          "duration_per_task_median": 49.212743807,
+          "accuracy_pct": 71.42857142857143
+        },
+        {
+          "arch": "crag",
+          "cost_per_task_median": 0.003345,
+          "duration_per_task_median": 58.317314022,
+          "accuracy_pct": 66.66666666666667
+        },
+        {
+          "arch": "lats",
+          "cost_per_task_median": 0.0174735,
+          "duration_per_task_median": 28.694932217,
+          "accuracy_pct": 66.66666666666667
+        }
+      ]
+    },
+    {
+      "model": "gemini-2.5-flash-lite",
+      "cost_per_task_median": 0.0096855,
+      "duration_per_task_median": 22.54439449,
+      "accuracy_pct": 65.85858585858585,
+      "accuracy_pct_min": 40.90909090909091,
+      "accuracy_pct_max": 90.0,
+      "accuracy_spread": 49.09090909090909,
+      "per_arch": [
+        {
+          "arch": "P&E",
+          "cost_per_task_median": 0.0124305,
+          "duration_per_task_median": 14.249031044,
+          "accuracy_pct": 40.90909090909091
+        },
+        {
+          "arch": "crag",
+          "cost_per_task_median": 0.0034109999999999995,
+          "duration_per_task_median": 24.979075339,
+          "accuracy_pct": 66.66666666666667
+        },
+        {
+          "arch": "lats",
+          "cost_per_task_median": 0.01233075,
+          "duration_per_task_median": 24.017697753,
+          "accuracy_pct": 90.0
+        }
+      ]
+    },
+    {
+      "model": "gpt-4o-mini",
+      "cost_per_task_median": 0.00337575,
+      "duration_per_task_median": 45.33425039,
+      "accuracy_pct": 47.61904761904762,
+      "accuracy_pct_min": 0.0,
+      "accuracy_pct_max": 71.42857142857143,
+      "accuracy_spread": 71.42857142857143,
+      "per_arch": [
+        {
+          "arch": "P&E",
+          "cost_per_task_median": 0.01386015,
+          "duration_per_task_median": 375.293459099,
+          "accuracy_pct": 0.0
+        },
+        {
+          "arch": "crag",
+          "cost_per_task_median": 0.0002597,
+          "duration_per_task_median": 29.155852278,
+          "accuracy_pct": 71.42857142857143
+        },
+        {
+          "arch": "lats",
+          "cost_per_task_median": 0.00337575,
+          "duration_per_task_median": 40.600017015,
+          "accuracy_pct": 71.42857142857143
+        }
+      ]
+    },
+    {
+      "model": "gpt-5-mini",
+      "cost_per_task_median": 0.006503999999999999,
+      "duration_per_task_median": 102.187351298,
+      "accuracy_pct": 76.19047619047619,
+      "accuracy_pct_min": 57.142857142857146,
+      "accuracy_pct_max": 90.47619047619048,
+      "accuracy_spread": 33.333333333333336,
+      "per_arch": [
+        {
+          "arch": "P&E",
+          "cost_per_task_median": 0.011445,
+          "duration_per_task_median": 174.418657507,
+          "accuracy_pct": 57.142857142857146
+        },
+        {
+          "arch": "crag",
+          "cost_per_task_median": 0.00025330000000000003,
+          "duration_per_task_median": 90.318284593,
+          "accuracy_pct": 80.95238095238095
+        },
+        {
+          "arch": "lats",
+          "cost_per_task_median": 0.023661,
+          "duration_per_task_median": 67.633521522,
+          "accuracy_pct": 90.47619047619048
+        }
+      ]
+    },
+    {
+      "model": "gpt-5-nano",
+      "cost_per_task_median": 0.016684499999999998,
+      "duration_per_task_median": 170.1811897995,
+      "accuracy_pct": 66.1111111111111,
+      "accuracy_pct_min": 52.38095238095238,
+      "accuracy_pct_max": 80.95238095238095,
+      "accuracy_spread": 28.57142857142857,
+      "per_arch": [
+        {
+          "arch": "P&E",
+          "cost_per_task_median": 0.032819999999999995,
+          "duration_per_task_median": 452.399395629,
+          "accuracy_pct": 52.38095238095238
+        },
+        {
+          "arch": "crag",
+          "cost_per_task_median": 0.0002502,
+          "duration_per_task_median": 131.161453362,
+          "accuracy_pct": 80.95238095238095
+        },
+        {
+          "arch": "lats",
+          "cost_per_task_median": 0.03994125,
+          "duration_per_task_median": 130.945008766,
+          "accuracy_pct": 65.0
+        }
+      ]
+    }
+  ],
+  "points": [
+    {
+      "model": "gemini-2.0-flash-lite",
+      "arch": "P&E",
+      "cost_per_task_median": 0.007269,
+      "duration_per_task_median": 32.1491503685,
+      "accuracy_pct": 68.18181818181819
+    },
+    {
+      "model": "gemini-2.0-flash-lite",
+      "arch": "crag",
+      "cost_per_task_median": 0.003243,
+      "duration_per_task_median": 32.600853637,
+      "accuracy_pct": 57.142857142857146
+    },
+    {
+      "model": "gemini-2.0-flash-lite",
+      "arch": "lats",
+      "cost_per_task_median": 0.010551,
+      "duration_per_task_median": 22.104331309,
+      "accuracy_pct": 36.8421052631579
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "arch": "P&E",
+      "cost_per_task_median": 0.0124065,
+      "duration_per_task_median": 49.212743807,
+      "accuracy_pct": 71.42857142857143
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "arch": "crag",
+      "cost_per_task_median": 0.003345,
+      "duration_per_task_median": 58.317314022,
+      "accuracy_pct": 66.66666666666667
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "arch": "lats",
+      "cost_per_task_median": 0.0174735,
+      "duration_per_task_median": 28.694932217,
+      "accuracy_pct": 66.66666666666667
+    },
+    {
+      "model": "gemini-2.5-flash-lite",
+      "arch": "P&E",
+      "cost_per_task_median": 0.0124305,
+      "duration_per_task_median": 14.249031044,
+      "accuracy_pct": 40.90909090909091
+    },
+    {
+      "model": "gemini-2.5-flash-lite",
+      "arch": "crag",
+      "cost_per_task_median": 0.0034109999999999995,
+      "duration_per_task_median": 24.979075339,
+      "accuracy_pct": 66.66666666666667
+    },
+    {
+      "model": "gemini-2.5-flash-lite",
+      "arch": "lats",
+      "cost_per_task_median": 0.01233075,
+      "duration_per_task_median": 24.017697753,
+      "accuracy_pct": 90.0
+    },
+    {
+      "model": "gpt-4o-mini",
+      "arch": "P&E",
+      "cost_per_task_median": 0.01386015,
+      "duration_per_task_median": 375.293459099,
+      "accuracy_pct": 0.0
+    },
+    {
+      "model": "gpt-4o-mini",
+      "arch": "crag",
+      "cost_per_task_median": 0.0002597,
+      "duration_per_task_median": 29.155852278,
+      "accuracy_pct": 71.42857142857143
+    },
+    {
+      "model": "gpt-4o-mini",
+      "arch": "lats",
+      "cost_per_task_median": 0.00337575,
+      "duration_per_task_median": 40.600017015,
+      "accuracy_pct": 71.42857142857143
+    },
+    {
+      "model": "gpt-5-mini",
+      "arch": "P&E",
+      "cost_per_task_median": 0.011445,
+      "duration_per_task_median": 174.418657507,
+      "accuracy_pct": 57.142857142857146
+    },
+    {
+      "model": "gpt-5-mini",
+      "arch": "crag",
+      "cost_per_task_median": 0.00025330000000000003,
+      "duration_per_task_median": 90.318284593,
+      "accuracy_pct": 80.95238095238095
+    },
+    {
+      "model": "gpt-5-mini",
+      "arch": "lats",
+      "cost_per_task_median": 0.023661,
+      "duration_per_task_median": 67.633521522,
+      "accuracy_pct": 90.47619047619048
+    },
+    {
+      "model": "gpt-5-nano",
+      "arch": "P&E",
+      "cost_per_task_median": 0.032819999999999995,
+      "duration_per_task_median": 452.399395629,
+      "accuracy_pct": 52.38095238095238
+    },
+    {
+      "model": "gpt-5-nano",
+      "arch": "crag",
+      "cost_per_task_median": 0.0002502,
+      "duration_per_task_median": 131.161453362,
+      "accuracy_pct": 80.95238095238095
+    },
+    {
+      "model": "gpt-5-nano",
+      "arch": "lats",
+      "cost_per_task_median": 0.03994125,
+      "duration_per_task_median": 130.945008766,
+      "accuracy_pct": 65.0
+    }
+  ],
+  "arch_order": [
+    "lats",
+    "crag",
+    "P&E"
+  ],
+  "arch_labels": {
+    "lats": "LATS",
+    "crag": "CRAG",
+    "P&E": "Plan-and-Execute"
+  },
+  "generated_from": "/home/cheny0y/maestro-workspace/maestro-project-page/data/raw/reference/model_boxplots_wi_dataset.csv"
+}

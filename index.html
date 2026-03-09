@@ -86,14 +86,12 @@
   <!-- Non-critical CSS - Load asynchronously -->
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   
   <!-- Fallback for browsers that don't support preload -->
   <noscript>
     <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
   
@@ -102,11 +100,13 @@
   
   <!-- Defer non-critical JavaScript -->
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
   <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
+  <script defer src="static/js/model_tradeoff_v1.js"></script>
   
   <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
@@ -230,6 +230,12 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
+            <img
+              src="static/images/docs/imgs/maestro-logo.png"
+              alt="MAESTRO logo"
+              loading="lazy"
+              style="width: 110px; height: auto; margin: 0 auto 0.75rem; display: block;"
+            />
             <!-- TODO: Replace with your paper title -->
             <h1 class="title is-1 publication-title">MAESTRO</h1>
             <div class="is-size-5 publication-authors">
@@ -245,31 +251,18 @@
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
                       <span class="link-block">
-                        <a href="static/pdfs/figures/tradeoff_scorecard_wi_by_model_overview.pdf" target="_blank"
+                        <a href="https://arxiv.org/abs/2601.00481" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
                         </span>
-                        <span>Tradeoff Plot</span>
+                        <span>Paper</span>
                       </a>
                     </span>
-
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/figures/model_boxplots_wi.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Model Boxplots</span>
-                    </a>
-                  </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
+                  
                   <span class="link-block">
-                    <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank"
+                    <a href="https://github.com/sands-lab/maestro" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -277,17 +270,6 @@
                     <span>Code</span>
                   </a>
                 </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="static/pdfs/figures/tavily_shift_latency_cost.pdf" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>Tavily Shift</span>
-                </a>
-              </span>
             </div>
           </div>
         </div>
@@ -302,13 +284,12 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
+      <video id="tree" controls muted loop playsinline height="100%" preload="metadata">
+        <source src="static/videos/demo.mp4" type="video/mp4">
       </video>
       <!-- TODO: Replace with your video description -->
       <h2 class="subtitle has-text-centered">
-        MAESTRO provides reproducible, cross-framework evaluation for multi-agent workflows with transparent telemetry and paper-grade plotting pipelines.
+        Demo video: MAESTRO benchmarking workflow and result inspection.
       </h2>
     </div>
   </div>
@@ -322,9 +303,12 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
           <p>
-            This website is the official MAESTRO project page. It hosts benchmark results, methodology, and reproducible artifacts synced from source benchmark repositories. The workflow keeps raw inputs and generated plots versioned together, so future visual transformations (including custom SVG pipelines) can be derived from the same canonical data.
+            MAESTRO is a unified evaluation suite for multi-agent systems. It helps researchers and practitioners
+            test how different backend LLMs and agent architectures affect reliability, cost, latency, and overall
+            task quality under reproducible settings. By standardizing telemetry collection and analysis, MAESTRO
+            makes it easier to compare systems fairly, diagnose failure modes, and understand where performance gains
+            are real versus unstable across tasks.
           </p>
         </div>
       </div>
@@ -333,6 +317,36 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- MAESTRO architecture overview -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">How MAESTRO Works</h2>
+    <div class="columns is-vcentered">
+      <div class="column is-6">
+        <div class="content has-text-justified">
+          <p>
+            MAESTRO evaluates multi-agent systems with a reproducible pipeline from trace collection to
+            paper-grade analysis plots. It aligns runs across models and agent architectures so cost,
+            duration, and accuracy can be compared consistently.
+          </p>
+          <p>
+            The architecture below summarizes this flow: collect telemetry, normalize into a shared
+            schema, compute comparable metrics, and publish interpretable visual outputs.
+          </p>
+        </div>
+      </div>
+      <div class="column is-6 has-text-centered">
+        <img
+          src="static/images/docs/imgs/maestro-arch.png"
+          alt="MAESTRO architecture overview"
+          loading="lazy"
+          style="max-width: 90%; max-height: 420px; width: auto; height: auto; object-fit: contain; margin: 0 auto; display: block;"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <!-- Image carousel -->
 <section class="hero is-small">
@@ -340,18 +354,15 @@
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/docs/imgs/maestro-logo.png" alt="MAESTRO logo" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
+        <img src="static/images/carousel1.jpg" alt="Telemetry plot placeholder" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
-          MAESTRO project logo.
+          Placeholder slot for benchmark visual.
         </h2>
       </div>
       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/docs/imgs/maestro-arch.png" alt="MAESTRO architecture" loading="lazy"/>
+        <img src="static/images/carousel2.jpg" alt="Telemetry plot placeholder" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
-          MAESTRO architecture overview.
+          Placeholder slot for benchmark visual.
         </h2>
       </div>
       <div class="item">
@@ -375,27 +386,6 @@
 <!-- End image carousel -->
 
 
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
 
 
 <!-- Video carousel -->
@@ -436,15 +426,37 @@
 
 
 
+<!-- Interactive model tradeoff (v1) -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Changing the Backend LLM Increases Cost, with Mixed Performance Gains</h2>
+    <p class="subtitle has-text-justified">
+      As model capability increases, budget cost usually increases as well, but task duration does not always decrease.
+      Weaker models can have lower token prices, yet often require more rounds to finish a task. For accuracy, stronger models
+      tend to improve results overall, but gains still show high variance: depending on query type and agent architecture, gains
+      can shrink or even turn negative.
+    </p>
+    <div id="model-tradeoff-map" style="width: 100%; min-height: 440px;"></div>
+    <div id="model-accuracy-spread" style="width: 100%; min-height: 460px; margin-top: 1rem;"></div>
+  </div>
+</section>
+
 <!-- Paper poster -->
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title">Reference Plot</h2>
+      <h2 class="title">Reference Plots</h2>
+      <h3 class="title is-5">Tradeoff Scorecard (Overview)</h3>
+      <iframe src="static/pdfs/figures/tradeoff_scorecard_wi_by_model_overview.pdf" width="100%" height="550"></iframe>
 
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/figures/tradeoff_scorecard_wi_by_model_overview.pdf" width="100%" height="550">
-          </iframe>
+      <h3 class="title is-5" style="margin-top: 1.25rem;">Accuracy by Architecture</h3>
+      <iframe src="static/pdfs/figures/accuracy_by_arch_wi.pdf" width="100%" height="550"></iframe>
+
+      <h3 class="title is-5" style="margin-top: 1.25rem;">Consistency by Architecture</h3>
+      <iframe src="static/pdfs/figures/consistency_by_arch_wi.pdf" width="100%" height="550"></iframe>
+
+      <h3 class="title is-5" style="margin-top: 1.25rem;">Tavily Shift (Latency vs Cost)</h3>
+      <iframe src="static/pdfs/figures/tavily_shift_latency_cost.pdf" width="100%" height="550"></iframe>
         
       </div>
     </div>
@@ -463,12 +475,14 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@misc{maestro_project_page_2026,
-  title={MAESTRO: Benchmarking Multi-Agent Systems with Transparent Telemetry},
-  author={MAESTRO Team},
-  year={2026},
-  howpublished={Project Website},
-  url={https://example.com/maestro-project-page}
+      <pre id="bibtex-code"><code>@misc{maestro,
+      title={MAESTRO: Multi-Agent Evaluation Suite for Testing, Reliability, and Observability},
+      author={Tie Ma and Yixi Chen and Vaastav Anand and Alessandro Cornacchia and Amândio R. Faustino and Guanheng Liu and Shan Zhang and Hongbin Luo and Suhaib A. Fahmy and Zafar A. Qazi and Marco Canini},
+      year={2026},
+      eprint={2601.00481},
+      archivePrefix={arXiv},
+      primaryClass={cs.NI},
+      url={https://arxiv.org/abs/2601.00481},
 }</code></pre>
     </div>
 </section>

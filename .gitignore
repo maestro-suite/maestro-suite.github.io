@@ -12,6 +12,7 @@ venv/
 
 # Development/build outputs (do not commit raw datasets or intermediate artifacts)
 data/raw/
+data/video/
 
 # Optional local temp outputs
 tmp/
