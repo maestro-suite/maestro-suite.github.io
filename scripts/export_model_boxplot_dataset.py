@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import os
 import sys
 from pathlib import Path
 from typing import List, Dict, Any
@@ -51,7 +52,7 @@ def main() -> int:
     )
     parser.add_argument(
         "--source-repo",
-        default="/home/cheny0y/git/mas-benchmark",
+        default=os.environ.get("MAS_BENCHMARK_REPO", ""),
         help="Path to source repo containing plot/lib/parquet_utils.py",
     )
     parser.add_argument(
@@ -71,6 +72,8 @@ def main() -> int:
     )
     args = parser.parse_args()
 
+    if not args.source_repo:
+        raise SystemExit("set --source-repo or MAS_BENCHMARK_REPO")
     source_repo = Path(args.source_repo).expanduser().resolve()
     if not source_repo.exists():
         raise SystemExit(f"source repo not found: {source_repo}")
@@ -107,8 +110,6 @@ def main() -> int:
         json_path = Path(args.json_output).expanduser().resolve()
         json_path.parent.mkdir(parents=True, exist_ok=True)
         payload = {
-            "source_repo": str(source_repo),
-            "config": str(config_path),
             "row_count": len(rows),
             "rows": rows,
         }

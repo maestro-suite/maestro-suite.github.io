@@ -6,7 +6,7 @@ set -euo pipefail
 # 2) consistency-by-arch
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-SOURCE_REPO="${SOURCE_REPO:-/home/cheny0y/git/mas-benchmark}"
+SOURCE_REPO="${SOURCE_REPO:-${MAS_BENCHMARK_REPO:-}}"
 
 MODEL_CONFIG_ARG="${MODEL_CONFIG_ARG:-plot/configs/runs_wi_by_model_parquet.json}"
 ARCH_CONFIG_ARG="${ARCH_CONFIG_ARG:-plot/configs/runs_wi_by_arch_parquet.json}"
@@ -20,6 +20,10 @@ LABEL_DISTANCE_THRESHOLD="${LABEL_DISTANCE_THRESHOLD:-0.18}"
 PLOT_MODE="${PLOT_MODE:-overview}"
 
 if [[ ! -d "$SOURCE_REPO" ]]; then
+  if [[ -z "$SOURCE_REPO" ]]; then
+    echo "Set SOURCE_REPO or MAS_BENCHMARK_REPO to your mas-benchmark path." >&2
+    exit 1
+  fi
   echo "Source repo not found: $SOURCE_REPO" >&2
   exit 1
 fi

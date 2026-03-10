@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 from pathlib import Path
 from statistics import median
 from typing import Dict, Iterable, List, Optional, Sequence, Tuple
@@ -120,7 +121,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--source-repo",
-        default="/home/cheny0y/git/mas-benchmark",
+        default=os.environ.get("MAS_BENCHMARK_REPO", ""),
         help="Path to mas-benchmark repo (for parquet loader).",
     )
     parser.add_argument(
@@ -140,6 +141,8 @@ def main() -> int:
     )
     args = parser.parse_args()
 
+    if not args.source_repo:
+        raise SystemExit("set --source-repo or MAS_BENCHMARK_REPO")
     source_repo = Path(args.source_repo).resolve()
     if not source_repo.exists():
         raise SystemExit(f"missing source repo: {source_repo}")

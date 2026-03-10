@@ -139,7 +139,6 @@ def main() -> int:
                 "points": point_payload,
                 "arch_order": ["lats", "crag", "P&E"],
                 "arch_labels": {"lats": "LATS", "crag": "CRAG", "P&E": "Plan-and-Execute"},
-                "generated_from": str(input_csv),
             },
             indent=2,
         ),

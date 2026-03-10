@@ -7,7 +7,7 @@ Official project page for MAESTRO: benchmark results, methodology, visualization
 Sync benchmark assets from the source repo:
 
 ```bash
-make sync SOURCE_REPO=/home/cheny0y/git/mas-benchmark
+make sync SOURCE_REPO=/path/to/mas-benchmark
 ```
 
 Source repo aliases: `config/source_repos.txt`  
@@ -45,7 +45,7 @@ scripts/run_reference_tavily_accuracy_delta.sh
 If needed, override source repo path:
 
 ```bash
-SOURCE_REPO=/home/cheny0y/git/agent-observability scripts/run_reference_tavily_accuracy_delta.sh
+SOURCE_REPO=/path/to/agent-observability scripts/run_reference_tavily_accuracy_delta.sh
 ```
 
 ## Repo Policy

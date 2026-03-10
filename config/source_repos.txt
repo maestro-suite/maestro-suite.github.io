@@ -1,3 +1,4 @@
 # alias=absolute_repo_path
-mas=/home/cheny0y/git/mas-benchmark
-obs=/home/cheny0y/git/agent-observability
+# Example:
+# mas=/path/to/mas-benchmark
+# obs=/path/to/agent-observability

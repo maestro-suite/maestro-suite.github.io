@@ -16,3 +16,10 @@ data/video/
 
 # Optional local temp outputs
 tmp/
+
+# Local screenshot notes during development
+develop/*
+
+static/pdfs/figures/*
+# Generated reference plot artifacts
+static/pdfs/figures/*.pdf

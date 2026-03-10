@@ -312,6 +312,5 @@
     "lats": "LATS",
     "crag": "CRAG",
     "P&E": "Plan-and-Execute"
-  },
-  "generated_from": "/home/cheny0y/maestro-workspace/maestro-project-page/data/raw/reference/model_boxplots_wi_dataset.csv"
+  }
 }

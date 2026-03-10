@@ -6,7 +6,7 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
-SOURCE_REPO="${SOURCE_REPO:-/home/cheny0y/git/mas-benchmark}"
+SOURCE_REPO="${SOURCE_REPO:-${MAS_BENCHMARK_REPO:-}}"
 CONFIG_REL="${CONFIG_REL:-plot/configs/runs_wi_by_model_parquet.json}"
 PLOT_OUTPUT="${PLOT_OUTPUT:-$ROOT_DIR/data/raw/reference/model_boxplots_wi.pdf}"
 CSV_OUTPUT="${CSV_OUTPUT:-$ROOT_DIR/data/raw/reference/model_boxplots_wi_dataset.csv}"
@@ -14,6 +14,10 @@ JSON_OUTPUT="${JSON_OUTPUT:-$ROOT_DIR/data/raw/reference/model_boxplots_wi_datas
 TITLE="${TITLE:-Cost/Duration/Accuracy by Model (with web search)}"
 
 if [[ ! -d "$SOURCE_REPO" ]]; then
+  if [[ -z "$SOURCE_REPO" ]]; then
+    echo "Set SOURCE_REPO or MAS_BENCHMARK_REPO to your mas-benchmark path." >&2
+    exit 1
+  fi
   echo "Source repo not found: $SOURCE_REPO" >&2
   exit 1
 fi

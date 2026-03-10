@@ -6,9 +6,14 @@ set -euo pipefail
 # Fallback source: mas-benchmark (plot/plot_telemetry_tavily_diff.py)
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-SOURCE_REPO="${SOURCE_REPO:-/home/cheny0y/git/agent-observability}"
-FALLBACK_PLOT_REPO="${FALLBACK_PLOT_REPO:-/home/cheny0y/git/mas-benchmark}"
+SOURCE_REPO="${SOURCE_REPO:-${AGENT_OBSERVABILITY_REPO:-}}"
+FALLBACK_PLOT_REPO="${FALLBACK_PLOT_REPO:-${MAS_BENCHMARK_REPO:-}}"
 ACCURACY_OUTPUT="${ACCURACY_OUTPUT:-$ROOT_DIR/static/pdfs/figures/tavily_accuracy_delta.pdf}"
+
+if [[ -z "$SOURCE_REPO" ]]; then
+  echo "Set SOURCE_REPO or AGENT_OBSERVABILITY_REPO to your agent-observability path." >&2
+  exit 1
+fi
 
 if [[ ! -d "$SOURCE_REPO" ]]; then
   echo "Source repo not found: $SOURCE_REPO" >&2

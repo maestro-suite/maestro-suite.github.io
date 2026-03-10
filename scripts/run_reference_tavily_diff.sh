@@ -4,7 +4,7 @@ set -euo pipefail
 # Reproduce paper RQ3 Tavily on/off latency-cost shift plot from parquet configs.
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-SOURCE_REPO="${SOURCE_REPO:-/home/cheny0y/git/mas-benchmark}"
+SOURCE_REPO="${SOURCE_REPO:-${MAS_BENCHMARK_REPO:-}}"
 
 WITH_CONFIG_ARG="${WITH_CONFIG_ARG:-plot/configs/runs_wi_by_arch_parquet.json}"
 WITHOUT_CONFIG_ARG="${WITHOUT_CONFIG_ARG:-plot/configs/runs_wo_by_arch_parquet.json}"
@@ -12,6 +12,10 @@ WITHOUT_CONFIG_ARG="${WITHOUT_CONFIG_ARG:-plot/configs/runs_wo_by_arch_parquet.j
 SCATTER_OUTPUT="${SCATTER_OUTPUT:-$ROOT_DIR/data/raw/reference/tavily_shift_latency_cost.pdf}"
 
 if [[ ! -d "$SOURCE_REPO" ]]; then
+  if [[ -z "$SOURCE_REPO" ]]; then
+    echo "Set SOURCE_REPO or MAS_BENCHMARK_REPO to your mas-benchmark path." >&2
+    exit 1
+  fi
   echo "Source repo not found: $SOURCE_REPO" >&2
   exit 1
 fi
