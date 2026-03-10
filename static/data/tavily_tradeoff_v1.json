@@ -1,0 +1,275 @@
+{
+  "model_order": [
+    "gemini-2.0-flash-lite",
+    "gemini-2.5-flash-lite",
+    "gemini-2.5-flash",
+    "gpt-4o-mini",
+    "gpt-5-nano",
+    "gpt-5-mini"
+  ],
+  "arch_order": [
+    "P&E",
+    "crag",
+    "lats"
+  ],
+  "arch_labels": {
+    "P&E": "Plan-and-Execute",
+    "crag": "CRAG",
+    "lats": "LATS"
+  },
+  "scatter_points": [
+    {
+      "arch": "P&E",
+      "model": "gemini-2.0-flash-lite",
+      "duration_change_pct": 151.89796498163886,
+      "cost_change_pct": -23.888801633422343,
+      "accuracy_change_pct": 186.36363636363635,
+      "accuracy_change_abs": 44.37229437229438
+    },
+    {
+      "arch": "P&E",
+      "model": "gemini-2.5-flash-lite",
+      "duration_change_pct": -3.146650167095191,
+      "cost_change_pct": 0.012068549360364994,
+      "accuracy_change_pct": -14.090909090909086,
+      "accuracy_change_abs": -6.709956709956707
+    },
+    {
+      "arch": "P&E",
+      "model": "gemini-2.5-flash",
+      "duration_change_pct": 54.21885003753546,
+      "cost_change_pct": -37.17909767583169,
+      "accuracy_change_pct": 36.36363636363635,
+      "accuracy_change_abs": 19.047619047619044
+    },
+    {
+      "arch": "P&E",
+      "model": "gpt-4o-mini",
+      "duration_change_pct": 24.601663092499322,
+      "cost_change_pct": -48.601005718354365,
+      "accuracy_change_pct": 0.0,
+      "accuracy_change_abs": 0.0
+    },
+    {
+      "arch": "P&E",
+      "model": "gpt-5-nano",
+      "duration_change_pct": 80.69917028101116,
+      "cost_change_pct": 9.225239616613395,
+      "accuracy_change_pct": -38.88888888888889,
+      "accuracy_change_abs": -33.333333333333336
+    },
+    {
+      "arch": "P&E",
+      "model": "gpt-5-mini",
+      "duration_change_pct": 38.92054673361848,
+      "cost_change_pct": -40.75166951389967,
+      "accuracy_change_pct": -14.285714285714299,
+      "accuracy_change_abs": -9.523809523809533
+    },
+    {
+      "arch": "crag",
+      "model": "gemini-2.0-flash-lite",
+      "duration_change_pct": 70.26562327930546,
+      "cost_change_pct": 125.91431556948795,
+      "accuracy_change_pct": 0.0,
+      "accuracy_change_abs": 57.14285714285714
+    },
+    {
+      "arch": "crag",
+      "model": "gemini-2.5-flash-lite",
+      "duration_change_pct": 43.74433180602857,
+      "cost_change_pct": 143.20855614973257,
+      "accuracy_change_pct": 100.0,
+      "accuracy_change_abs": 33.333333333333336
+    },
+    {
+      "arch": "crag",
+      "model": "gemini-2.5-flash",
+      "duration_change_pct": 22.917118191970822,
+      "cost_change_pct": 146.13686534216333,
+      "accuracy_change_pct": 133.33333333333337,
+      "accuracy_change_abs": 38.0952380952381
+    },
+    {
+      "arch": "crag",
+      "model": "gpt-4o-mini",
+      "duration_change_pct": 42.042127490291676,
+      "cost_change_pct": 100.38580246913583,
+      "accuracy_change_pct": 0.0,
+      "accuracy_change_abs": 0.0
+    },
+    {
+      "arch": "crag",
+      "model": "gpt-5-nano",
+      "duration_change_pct": -17.69151774182071,
+      "cost_change_pct": 84.24153166421206,
+      "accuracy_change_pct": 70.00000000000001,
+      "accuracy_change_abs": 33.333333333333336
+    },
+    {
+      "arch": "crag",
+      "model": "gpt-5-mini",
+      "duration_change_pct": -0.2534965221405946,
+      "cost_change_pct": 95.59845559845562,
+      "accuracy_change_pct": 466.6666666666664,
+      "accuracy_change_abs": 66.66666666666666
+    },
+    {
+      "arch": "lats",
+      "model": "gemini-2.0-flash-lite",
+      "duration_change_pct": 234.98356999170272,
+      "cost_change_pct": 4.486036838978018,
+      "accuracy_change_pct": -46.2719298245614,
+      "accuracy_change_abs": -31.729323308270672
+    },
+    {
+      "arch": "lats",
+      "model": "gemini-2.5-flash-lite",
+      "duration_change_pct": 261.4207209929468,
+      "cost_change_pct": 18.896442001735604,
+      "accuracy_change_pct": 43.18181818181819,
+      "accuracy_change_abs": 27.142857142857146
+    },
+    {
+      "arch": "lats",
+      "model": "gemini-2.5-flash",
+      "duration_change_pct": 156.12070444192258,
+      "cost_change_pct": 99.46917808219176,
+      "accuracy_change_pct": 14.285714285714304,
+      "accuracy_change_abs": 8.333333333333343
+    },
+    {
+      "arch": "lats",
+      "model": "gpt-4o-mini",
+      "duration_change_pct": 299.5211487058271,
+      "cost_change_pct": 213.96484375000006,
+      "accuracy_change_pct": -9.523809523809518,
+      "accuracy_change_abs": -7.5187969924811995
+    },
+    {
+      "arch": "lats",
+      "model": "gpt-5-nano",
+      "duration_change_pct": 227.28963569955462,
+      "cost_change_pct": 174.3971558120363,
+      "accuracy_change_pct": 0.0,
+      "accuracy_change_abs": 0.0
+    },
+    {
+      "arch": "lats",
+      "model": "gpt-5-mini",
+      "duration_change_pct": 92.58367430969587,
+      "cost_change_pct": 109.59340951368586,
+      "accuracy_change_pct": 18.315018315018325,
+      "accuracy_change_abs": 14.005602240896366
+    }
+  ],
+  "accuracy_arch": {
+    "P&E": {
+      "accuracy_with": 48.4375,
+      "accuracy_without": 46.03174603174603,
+      "accuracy_delta_abs": 2.4057539682539684
+    },
+    "crag": {
+      "accuracy_with": 70.63492063492063,
+      "accuracy_without": 32.53968253968254,
+      "accuracy_delta_abs": 38.095238095238095
+    },
+    "lats": {
+      "accuracy_with": 70.49180327868852,
+      "accuracy_without": 66.66666666666667,
+      "accuracy_delta_abs": 3.8251366120218506
+    }
+  },
+  "accuracy_model_points": [
+    {
+      "arch": "P&E",
+      "model": "gemini-2.0-flash-lite",
+      "accuracy_change_abs": 44.37229437229438
+    },
+    {
+      "arch": "P&E",
+      "model": "gemini-2.5-flash-lite",
+      "accuracy_change_abs": -6.709956709956707
+    },
+    {
+      "arch": "P&E",
+      "model": "gemini-2.5-flash",
+      "accuracy_change_abs": 19.047619047619044
+    },
+    {
+      "arch": "P&E",
+      "model": "gpt-4o-mini",
+      "accuracy_change_abs": 0.0
+    },
+    {
+      "arch": "P&E",
+      "model": "gpt-5-nano",
+      "accuracy_change_abs": -33.333333333333336
+    },
+    {
+      "arch": "P&E",
+      "model": "gpt-5-mini",
+      "accuracy_change_abs": -9.523809523809533
+    },
+    {
+      "arch": "crag",
+      "model": "gemini-2.0-flash-lite",
+      "accuracy_change_abs": 57.14285714285714
+    },
+    {
+      "arch": "crag",
+      "model": "gemini-2.5-flash-lite",
+      "accuracy_change_abs": 33.333333333333336
+    },
+    {
+      "arch": "crag",
+      "model": "gemini-2.5-flash",
+      "accuracy_change_abs": 38.0952380952381
+    },
+    {
+      "arch": "crag",
+      "model": "gpt-4o-mini",
+      "accuracy_change_abs": 0.0
+    },
+    {
+      "arch": "crag",
+      "model": "gpt-5-nano",
+      "accuracy_change_abs": 33.333333333333336
+    },
+    {
+      "arch": "crag",
+      "model": "gpt-5-mini",
+      "accuracy_change_abs": 66.66666666666666
+    },
+    {
+      "arch": "lats",
+      "model": "gemini-2.0-flash-lite",
+      "accuracy_change_abs": -31.729323308270672
+    },
+    {
+      "arch": "lats",
+      "model": "gemini-2.5-flash-lite",
+      "accuracy_change_abs": 27.142857142857146
+    },
+    {
+      "arch": "lats",
+      "model": "gemini-2.5-flash",
+      "accuracy_change_abs": 8.333333333333343
+    },
+    {
+      "arch": "lats",
+      "model": "gpt-4o-mini",
+      "accuracy_change_abs": -7.5187969924811995
+    },
+    {
+      "arch": "lats",
+      "model": "gpt-5-nano",
+      "accuracy_change_abs": 0.0
+    },
+    {
+      "arch": "lats",
+      "model": "gpt-5-mini",
+      "accuracy_change_abs": 14.005602240896366
+    }
+  ]
+}

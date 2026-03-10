@@ -28,6 +28,26 @@ For remote SSH preview (including jump-host setup), see:
 
 - `develop/REMOTE_PREVIEW.md`
 
+## Reproduce Reference Plots
+
+Generate the Tavily on/off latency-cost reference plot (from `mas-benchmark`):
+
+```bash
+scripts/run_reference_tavily_diff.sh
+```
+
+Generate the Tavily on/off accuracy-delta reference plot (from `agent-observability`) directly into website assets:
+
+```bash
+scripts/run_reference_tavily_accuracy_delta.sh
+```
+
+If needed, override source repo path:
+
+```bash
+SOURCE_REPO=/home/cheny0y/git/agent-observability scripts/run_reference_tavily_accuracy_delta.sh
+```
+
 ## Repo Policy
 
 - Commit website code, template assets, and publish-ready figures.

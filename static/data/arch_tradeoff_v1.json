@@ -1,0 +1,174 @@
+{
+  "model_order": [
+    "gemini-2.0-flash-lite",
+    "gemini-2.5-flash-lite",
+    "gemini-2.5-flash",
+    "gpt-4o-mini",
+    "gpt-5-nano",
+    "gpt-5-mini"
+  ],
+  "points": [
+    {
+      "model": "gemini-2.0-flash-lite",
+      "arch": "P&E",
+      "latency": 32.1491503685,
+      "cost": 0.007269,
+      "accuracy": 68.18181818181819
+    },
+    {
+      "model": "gemini-2.5-flash-lite",
+      "arch": "P&E",
+      "latency": 14.249031044,
+      "cost": 0.0124305,
+      "accuracy": 40.90909090909091
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "arch": "P&E",
+      "latency": 49.212743807,
+      "cost": 0.0124065,
+      "accuracy": 71.42857142857143
+    },
+    {
+      "model": "gpt-4o-mini",
+      "arch": "P&E",
+      "latency": 375.293459099,
+      "cost": 0.01386015,
+      "accuracy": 0.0
+    },
+    {
+      "model": "gpt-5-nano",
+      "arch": "P&E",
+      "latency": 452.399395629,
+      "cost": 0.032819999999999995,
+      "accuracy": 52.38095238095239
+    },
+    {
+      "model": "gpt-5-mini",
+      "arch": "P&E",
+      "latency": 174.418657507,
+      "cost": 0.011445,
+      "accuracy": 57.14285714285714
+    },
+    {
+      "model": "gemini-2.0-flash-lite",
+      "arch": "crag",
+      "latency": 32.600853637,
+      "cost": 0.003243,
+      "accuracy": 57.14285714285714
+    },
+    {
+      "model": "gemini-2.5-flash-lite",
+      "arch": "crag",
+      "latency": 24.979075339,
+      "cost": 0.0034109999999999995,
+      "accuracy": 66.66666666666667
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "arch": "crag",
+      "latency": 58.317314022,
+      "cost": 0.003345,
+      "accuracy": 66.66666666666667
+    },
+    {
+      "model": "gpt-4o-mini",
+      "arch": "crag",
+      "latency": 29.155852278,
+      "cost": 0.0002597,
+      "accuracy": 71.42857142857143
+    },
+    {
+      "model": "gpt-5-nano",
+      "arch": "crag",
+      "latency": 131.161453362,
+      "cost": 0.0002502,
+      "accuracy": 80.95238095238095
+    },
+    {
+      "model": "gpt-5-mini",
+      "arch": "crag",
+      "latency": 90.318284593,
+      "cost": 0.00025330000000000003,
+      "accuracy": 80.95238095238095
+    },
+    {
+      "model": "gemini-2.0-flash-lite",
+      "arch": "lats",
+      "latency": 22.104331309,
+      "cost": 0.010551,
+      "accuracy": 36.8421052631579
+    },
+    {
+      "model": "gemini-2.5-flash-lite",
+      "arch": "lats",
+      "latency": 24.017697753,
+      "cost": 0.01233075,
+      "accuracy": 90.0
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "arch": "lats",
+      "latency": 28.694932217,
+      "cost": 0.0174735,
+      "accuracy": 66.66666666666667
+    },
+    {
+      "model": "gpt-4o-mini",
+      "arch": "lats",
+      "latency": 40.600017015,
+      "cost": 0.00337575,
+      "accuracy": 71.42857142857143
+    },
+    {
+      "model": "gpt-5-nano",
+      "arch": "lats",
+      "latency": 130.945008766,
+      "cost": 0.03994125,
+      "accuracy": 65.0
+    },
+    {
+      "model": "gpt-5-mini",
+      "arch": "lats",
+      "latency": 67.633521522,
+      "cost": 0.023661,
+      "accuracy": 90.47619047619048
+    }
+  ],
+  "arch_summary": [
+    {
+      "arch": "P&E",
+      "accuracy": 48.34054834054834,
+      "accuracy_min": 0.0,
+      "accuracy_max": 71.42857142857143,
+      "latency_median": 111.81570065700001,
+      "cost_median": 0.0124185
+    },
+    {
+      "arch": "crag",
+      "accuracy": 70.63492063492065,
+      "accuracy_min": 57.14285714285714,
+      "accuracy_max": 80.95238095238095,
+      "latency_median": 45.4590838295,
+      "cost_median": 0.0017513499999999998
+    },
+    {
+      "arch": "lats",
+      "accuracy": 70.06892230576442,
+      "accuracy_min": 36.8421052631579,
+      "accuracy_max": 90.47619047619048,
+      "latency_median": 34.647474616,
+      "cost_median": 0.014902124999999999
+    }
+  ],
+  "arch_order": [
+    "P&E",
+    "crag",
+    "lats"
+  ],
+  "arch_labels": {
+    "P&E": "Plan-and-Execute",
+    "crag": "CRAG",
+    "lats": "LATS"
+  }
+}

@@ -107,6 +107,8 @@
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
   <script defer src="static/js/model_tradeoff_v1.js"></script>
+  <script defer src="static/js/arch_tradeoff_v1.js"></script>
+  <script defer src="static/js/tavily_tradeoff_v1.js"></script>
   
   <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
@@ -234,14 +236,14 @@
               src="static/images/docs/imgs/maestro-logo.png"
               alt="MAESTRO logo"
               loading="lazy"
-              style="width: 110px; height: auto; margin: 0 auto 0.75rem; display: block;"
+              style="width: 150px; height: auto; margin: 0 auto 0.75rem; display: block;"
             />
             <!-- TODO: Replace with your paper title -->
             <h1 class="title is-1 publication-title">MAESTRO</h1>
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
-                <a href="#" target="_blank">MAESTRO Team</a></span>
+                <a href="https://sands.kaust.edu.sa" target="_blank" rel="noopener noreferrer">MAESTRO Team</a></span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
@@ -270,6 +272,20 @@
                     <span>Code</span>
                   </a>
                 </span>
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/kaust-generative-ai/maestro-mas-benchmark" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <img
+                      src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
+                      alt="Hugging Face"
+                      loading="lazy"
+                      style="width: 18px; height: 18px;"
+                    />
+                  </span>
+                  <span>Hugging Face</span>
+                </a>
+              </span>
             </div>
           </div>
         </div>
@@ -284,7 +300,7 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <!-- TODO: Replace with your teaser video -->
-      <video id="tree" controls muted loop playsinline height="100%" preload="metadata">
+      <video id="tree" poster="data/raw/demo-preview.jpg" controls muted loop playsinline height="100%" preload="metadata">
         <source src="static/videos/demo.mp4" type="video/mp4">
       </video>
       <!-- TODO: Replace with your video description -->
@@ -348,84 +364,6 @@
 </section>
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <img src="static/images/carousel1.jpg" alt="Telemetry plot placeholder" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Placeholder slot for benchmark visual.
-        </h2>
-      </div>
-      <div class="item">
-        <img src="static/images/carousel2.jpg" alt="Telemetry plot placeholder" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Placeholder slot for benchmark visual.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Telemetry plot placeholder" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Placeholder slot for telemetry result visual.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Telemetry plot placeholder" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Placeholder slot for telemetry result visual.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
 <!-- Interactive model tradeoff (v1) -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -441,29 +379,66 @@
   </div>
 </section>
 
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Reference Plots</h2>
-      <h3 class="title is-5">Tradeoff Scorecard (Overview)</h3>
-      <iframe src="static/pdfs/figures/tradeoff_scorecard_wi_by_model_overview.pdf" width="100%" height="550"></iframe>
-
-      <h3 class="title is-5" style="margin-top: 1.25rem;">Accuracy by Architecture</h3>
-      <iframe src="static/pdfs/figures/accuracy_by_arch_wi.pdf" width="100%" height="550"></iframe>
-
-      <h3 class="title is-5" style="margin-top: 1.25rem;">Consistency by Architecture</h3>
-      <iframe src="static/pdfs/figures/consistency_by_arch_wi.pdf" width="100%" height="550"></iframe>
-
-      <h3 class="title is-5" style="margin-top: 1.25rem;">Tavily Shift (Latency vs Cost)</h3>
-      <iframe src="static/pdfs/figures/tavily_shift_latency_cost.pdf" width="100%" height="550"></iframe>
-        
+<!-- Interactive architecture comparison -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Changing Agent Architecture Shifts Reliability and Resource Patterns</h2>
+    <p class="subtitle has-text-justified">
+      Architecture choice (<em>Plan-and-Execute</em>, <em>CRAG</em>, <em>LATS</em> ) also changes how reliably tasks are solved
+      and how consistently cost/duration behave. While different architectures can have similar average accuracy, 
+      they can stably behave differently in the sense of speed and cost. For example, <em>CRAG</em> mainly varies in speed, 
+      while <em>LATS</em> mainly varies in cost. This suggests that architecture choice can be a key lever for optimizing specific 
+      performance dimensions, and that different architectures may be more suitable for different application contexts depending 
+      on whether latency or cost is the primary concern.
+    </p>
+    <div class="columns is-variable is-4">
+      <div class="column is-8">
+        <div id="arch-tradeoff-trend" style="width: 100%; min-height: 500px;"></div>
+      </div>
+      <div class="column is-4">
+        <div id="arch-accuracy-panel" style="width: 100%; min-height: 500px;"></div>
       </div>
     </div>
-  </section>
-<!--End paper poster -->
+  </div>
+</section>
 
+<!-- Tool usage comparison (staged reference) -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Web Search Helps Selectively, with Latency-Cost Tradeoffs</h2>
+    <p class="subtitle has-text-justified tavily-intro">
+      Turning web search on does not help every setting equally. The same tool can increase latency and cost in some
+      model-architecture combinations while improving outcomes in others. Accuracy can improve or regress depending on
+      workload behavior and agent decision paths.
+    </p>
+    <div class="tavily-chip-row" aria-label="Key metrics">
+      <span class="tavily-chip">Latency</span>
+      <span class="tavily-chip">Cost</span>
+      <span class="tavily-chip">Accuracy</span>
+    </div>
 
+    <div class="columns is-variable is-5 tavily-cards">
+      <div class="column is-6">
+        <article class="tavily-card">
+          <h3 class="title is-5 tavily-card-title">Latency-Cost Shift with Web Search</h3>
+          <p class="tavily-card-caption">What this shows: how enabling Tavily shifts each setup in speed-vs-cost space. The shift is architecture-dependent: some architectures move mostly along cost, some mostly along duration, and some along both, highlighting different operational tradeoffs.</p></br>
+          <div class="tavily-frame">
+            <div id="tavily-shift-chart" class="tavily-plot"></div>
+          </div>
+        </article>
+      </div>
+      <div class="column is-6">
+        <article class="tavily-card">
+          <h3 class="title is-5 tavily-card-title">Accuracy Change with Web Search</h3>
+          <p class="tavily-card-caption">What this shows: accuracy change after turning web search on. Gains are not uniform across architectures or models, and in some settings the change can be small or negative.</p></br>
+          <div class="tavily-frame">
+            <div id="tavily-accuracy-chart" class="tavily-plot"></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
