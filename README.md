@@ -28,6 +28,14 @@ For remote SSH preview (including jump-host setup), see:
 
 - `develop/REMOTE_PREVIEW.md`
 
+## Optional UI: More Works Dropdown
+
+The floating `More Works` dropdown is intentionally disabled for now to avoid showing template placeholders.
+
+- Location: `index.html` near the top of `<body>`, under `<!-- More Works Dropdown (disabled...) -->`
+- To re-enable: uncomment that full HTML block.
+- Before enabling: replace placeholder links/titles with real project/paper entries.
+
 ## Reproduce Reference Plots
 
 Generate the Tavily on/off latency-cost reference plot (from `mas-benchmark`):
